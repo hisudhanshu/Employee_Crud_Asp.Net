@@ -13,18 +13,23 @@ namespace OnlineTuto
         {
 
             {
-                if (Session["role"] != null)
+                // Check if a user session exists
+                if (Session["role"] == null)
                 {
-                    if (!Session["role"].ToString().Equals("ADMIN"))
-                    {
-
-                    }
-                }
-                else
-                {
-                    Response.Redirect("login.aspx");//Redirect to login page if there is no role find in session.
+                    // Redirect to login page if the session does not exist
+                    Response.Redirect("login.aspx");
+                    return;
                 }
 
+                // Validate if the user's role is "ADMIN"
+                if (!Session["role"].ToString().Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Redirect to unauthorized page if the user is not an admin
+                    Response.Redirect("login.aspx");
+                    return;
+                }
+
+                // Admin-specific functionality can be added here
             }
         }
     }
