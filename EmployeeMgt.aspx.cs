@@ -12,6 +12,20 @@ namespace OnlineTuto
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            {
+                if (Session["role"] != null)
+                {
+                    if (!Session["role"].ToString().Equals("ADMIN"))
+                    {
+
+                    }
+                }
+                else
+                {
+                    Response.Redirect("login.aspx");//Redirect to login page if there is no role find in session.
+                }
+
+            }
         }
     }
 }

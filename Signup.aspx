@@ -15,7 +15,7 @@
             <h1 style="text-align: center;">Signup</h1>
             <p>&nbsp;</p>
 
-           <!-- Display messages -->
+            <!-- Display messages -->
             <div class="form-group" style="text-align: center;">
                 <asp:Label ID="MessageLbl" runat="server" Text=""></asp:Label>
             </div>
@@ -70,9 +70,12 @@
                 </asp:Panel>
             </div>
             <div class="form-group" style="text-align: center;">
-                            <p>&nbsp;</p>
+                <p>&nbsp;</p>
 
-                <asp:Button ID="SignupBtn" runat="server" CssClass="btn btn-primary" OnClick="SignupBtn_Click" Text="Signup" />
+                <asp:Button ID="SignupBtn" runat="server" CssClass="btn btn-primary" OnClick="SignupBtn_Click" Text="Signup" /><br />
+                <br />
+                <asp:HyperLink ID="Hyperlink1" runat="server" NavigateUrl="~/Login.aspx">Already have an account? Login</asp:HyperLink>
+
             </div>
 
 
