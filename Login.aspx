@@ -14,6 +14,9 @@
             <p>&nbsp;</p>
             <h1 style="text-align: center;">Login</h1>
             <p>&nbsp;</p>
+            <div class="form-group" style="text-align: center;">
+                <asp:Label ID="MessageLbl" runat="server" Text=""></asp:Label>
+            </div>
             <div class="form-group">
 
                 <asp:Panel ID="Panel6" runat="server" CssClass="form-group">
@@ -28,7 +31,7 @@
             <div class="form-group" style="text-align: center;">
                 <p>&nbsp;</p>
 
-                <asp:Button ID="LoginBtn" runat="server" CssClass="btn btn-primary" Text="Login" />
+                <asp:Button ID="LoginBtn" runat="server" CssClass="btn btn-primary" OnClick="LoginBtn_Click" Text="Login" />
             </div>
 
 
