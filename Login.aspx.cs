@@ -43,7 +43,7 @@ namespace OnlineTuto
 
                         if (passwordBox.Text.Trim().Equals(passwordFromDb))
                         {
-                            Session["role"] = roleFromDb; // Assign correct role to session
+                            Session["role"] = roleFromDb; // Assign correct role to session for role wise
 
                             if (roleFromDb == "ADMIN")
                                 Response.Redirect("EmployeeMgt.aspx");
